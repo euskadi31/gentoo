@@ -1,0 +1,4 @@
+.DS_Store
+*.xz
+*.bz2
+data/*
