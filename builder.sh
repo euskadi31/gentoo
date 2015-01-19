@@ -60,6 +60,10 @@ ebegin "Create git tag"
 git tag -a $STAGE3 -m "[release] ${STAGE3:0:4}-${STAGE3:4:2}-${STAGE3:6}"
 eend $?
 
+ebegin "Push git tag"
+git push --follow-tags > /dev/null
+eend $?
+
 echo "$STAGE3" > $LAST_STAGE3_LOCK
 
 
